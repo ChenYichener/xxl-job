@@ -55,7 +55,7 @@ public class WorkWeixinRobotJobAlarm implements JobAlarm {
     }
 
     public String buildContent(XxlJobInfo info, XxlJobLog jobLog) {
-        return "####【定时器执行异常】 " +
+        return "#### <font size=18 color=red>【定时器执行异常】</font> " +
                 "\n\n > <font color=red>任务名称 : " + info.getJobDesc() + "</font>" +
                 "\n > <font color=red>执行器名称 : " + info.getExecutorHandler() + "</font>" +
                 "\n > <font color=red>负责人 : " + info.getAuthor() + "</font>" +
@@ -64,7 +64,7 @@ public class WorkWeixinRobotJobAlarm implements JobAlarm {
                 "\n > TriggerMsg : " + jobLog.getTriggerMsg().replace("<br>", "\n") + "" +
                 "\n > HandleCode : " + jobLog.getHandleMsg() + "" +
                 "\n > 报警时间 : " + new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()) +
-                "\n > <font color=red>收到请回复</font>";
+                "\n > <font  size=17 color=blue><@" + info.getAuthor() + ">, 请立即定位和解决异常问题，收到请回复。</font>";
     }
 
     public String getDataTemplate(String content) {
