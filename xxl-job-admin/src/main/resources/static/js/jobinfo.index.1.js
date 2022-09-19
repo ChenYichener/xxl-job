@@ -392,12 +392,15 @@ $(function() {
         errorClass : 'help-block',
         focusInvalid : true,
         rules : {
-			jobDesc : {
-				required : true,
+			jobDesc: {
+				required: true,
 				maxlength: 50
 			},
-			author : {
-				required : true
+			author: {
+				required: true
+			},
+			alarmEmail: {
+				required: true
 			}/*,
             executorTimeout : {
                 digits:true
@@ -405,21 +408,24 @@ $(function() {
             executorFailRetryCount : {
                 digits:true
             }*/
-        },
+		},
         messages : {
-            jobDesc : {
-            	required : I18n.system_please_input + I18n.jobinfo_field_jobdesc
-            },
-            author : {
-            	required : I18n.system_please_input + I18n.jobinfo_field_author
-            }/*,
+			jobDesc: {
+				required: I18n.system_please_input + I18n.jobinfo_field_jobdesc
+			},
+			author: {
+				required: I18n.system_please_input + I18n.jobinfo_field_author
+			},
+			alarmEmail: {
+				required: I18n.system_please_input + I18n.jobinfo_field_alarmemail
+			}/*,
             executorTimeout : {
                 digits: I18n.system_please_input + I18n.system_digits
             },
             executorFailRetryCount : {
                 digits: I18n.system_please_input + I18n.system_digits
             }*/
-        },
+		},
 		highlight : function(element) {
             $(element).closest('.form-group').addClass('has-error');
         },

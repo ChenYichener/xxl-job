@@ -122,26 +122,36 @@
 							<select class="form-control" name="jobGroup" >
 		            			<#list JobGroupList as group>
 		            				<option value="${group.id}" <#if jobGroup==group.id>selected</#if> >${group.title}</option>
-		            			</#list>
-		                  	</select>
-						</div>
+                                </#list>
+                            </select>
+                        </div>
 
-                        <label for="lastname" class="col-sm-2 control-label">${I18n.jobinfo_field_jobdesc}<font color="red">*</font></label>
-                        <div class="col-sm-4"><input type="text" class="form-control" name="jobDesc" placeholder="${I18n.system_please_input}${I18n.jobinfo_field_jobdesc}" maxlength="50" ></div>
-					</div>
+                        <label for="lastname" class="col-sm-2 control-label">${I18n.jobinfo_field_jobdesc}<font
+                                    color="red">*</font></label>
+                        <div class="col-sm-4"><input type="text" class="form-control" name="jobDesc"
+                                                     placeholder="${I18n.system_please_input}${I18n.jobinfo_field_jobdesc}"
+                                                     maxlength="50"></div>
+                    </div>
                     <div class="form-group">
-                        <label for="lastname" class="col-sm-2 control-label">${I18n.jobinfo_field_author}<font color="red">*</font></label>
-                        <div class="col-sm-4"><input type="text" class="form-control" name="author" placeholder="${I18n.system_please_input}${I18n.jobinfo_field_author}" maxlength="50" ></div>
-                        <label for="lastname" class="col-sm-2 control-label">${I18n.jobinfo_field_alarmemail}<font color="black">*</font></label>
-                        <div class="col-sm-4"><input type="text" class="form-control" name="alarmEmail" placeholder="${I18n.jobinfo_field_alarmemail_placeholder}" maxlength="100" ></div>
+                        <label for="lastname" class="col-sm-2 control-label">${I18n.jobinfo_field_author}<font
+                                    color="red">*</font></label>
+                        <div class="col-sm-4"><input type="text" class="form-control" name="author"
+                                                     placeholder="${I18n.system_please_input}${I18n.jobinfo_field_author}"
+                                                     maxlength="50"></div>
+                        <label for="lastname" class="col-sm-2 control-label">${I18n.jobinfo_field_alarmemail}<font
+                                    color="red">*</font></label>
+                        <div class="col-sm-4"><input type="text" class="form-control" name="alarmEmail"
+                                                     placeholder="${I18n.jobinfo_field_alarmemail_placeholder}"
+                                                     maxlength="100"></div>
                     </div>
 
                     <br>
-                    <p style="margin: 0 0 10px;text-align: left;border-bottom: 1px solid #e5e5e5;color: gray;">${I18n.jobinfo_conf_schedule}</p>    <#-- 调度 -->
+                    <p style="margin: 0 0 10px;text-align: left;border-bottom: 1px solid #e5e5e5;color: gray;">${I18n.jobinfo_conf_schedule}</p> <#-- 调度 -->
                     <div class="form-group">
-                        <label for="firstname" class="col-sm-2 control-label">${I18n.schedule_type}<font color="red">*</font></label>
+                        <label for="firstname" class="col-sm-2 control-label">${I18n.schedule_type}<font
+                                    color="red">*</font></label>
                         <div class="col-sm-4">
-                            <select class="form-control scheduleType" name="scheduleType" >
+                            <select class="form-control scheduleType" name="scheduleType">
                                 <#list ScheduleTypeEnum as item>
                                     <option value="${item}" <#if 'CRON' == item >selected</#if> >${item.title}</option>
                                 </#list>
